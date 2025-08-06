@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static int count(int n)
+    {
+        int c=0;
+        while(n!=0){
+            c++;
+    
+        n/=10;
+        }
+    
+    return c;
+    }
+
+     public static int findsum(int n,int c){
+         int sum=0;
+         while(n!=0){
+             int l=n%10;
+             int p=(int) Math.pow(l,c);
+             sum+=p;
+             n/=10;
+         }
+         return sum;
+                    
+     }
+
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        int c=count(n);
+        int sum=findsum(n,c);
+        if(sum==n){
+            System.out.println("true");
+        }else{
+            System.out.println("false");
+        }
+       
+    }
+}
+
