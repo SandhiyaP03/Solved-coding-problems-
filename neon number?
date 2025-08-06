@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static int square(int n){
+        int x=(int)Math.pow(n,2);
+    
+    return x;
+}
+    public static int sum(int n,int x){
+        int s=0;
+    while(x!=0){
+        int i=x%10;
+        s=s+i;
+    
+        x/=10;}
+    
+    return s;
+    }
+
+
+    
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int x=square(n);
+        int s=sum(n,x);
+            if(s==n){
+                System.out.println("true");
+            }else{
+                System.out.println("false");
+            }
+        
+    }
+}
